@@ -1,0 +1,62 @@
+## 📄 License
+
+This project uses a dual-license approach:
+
+### Framework & Documentation
+The CMMC Journey Model framework, methodology, guides, and templates are licensed under:
+
+**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+- ✅ Free to use for any purpose
+- ✅ Free to modify and adapt
+- ✅ Free to distribute
+- ⚠️ Must give credit
+- ⚠️ Must share modifications under same license
+
+### Code & Software
+All code, including the HTML roadmap and any software tools, is licensed under:
+
+**MIT License**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+- ✅ Free to use commercially
+- ✅ Free to modify
+- ✅ Free to distribute
+- ✅ Can be used in closed-source projects
+- ⚠️ Must include license notice
+
+### What This Means
+
+**You CAN:**
+- Use CJM for your business (free!)
+- Build tools based on CJM
+- Create training courses using CJM
+- Modify CJM for your industry
+- Sell services using CJM
+
+**You MUST:**
+- Give credit: "Based on CMMC Journey Model"
+- Share improvements to the framework (but NOT your tools)
+- Include the license text
+
+**You CANNOT:**
+- Claim you invented CJM
+- Remove attribution
+- Use a different license for modified framework docs
+```
+
+---
+
+## 🎯 Simple Folder Structure with Licenses
+```
+cmmc-journey-model/
+├── LICENSE (MIT - auto-created by GitHub)
+├── LICENSE-DOCUMENTATION.txt (CC BY-SA 4.0 - you create this)
+├── README.md (explain both licenses)
+├── /framework/ (CC BY-SA 4.0)
+├── /roadmap/ (MIT for code, CC BY-SA for content)
+├── /templates/ (CC BY-SA 4.0)
+├── /guides/ (CC BY-SA 4.0)

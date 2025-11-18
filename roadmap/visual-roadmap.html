@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMMC Compliance Journey Roadmap</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ CMMC Compliance Journey Roadmap</h1>
+            <p>Your step-by-step guide from contract discovery to certification</p>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #e74c3c;"></div>
+                <span><strong>Required</strong> - Must complete</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #f39c12;"></div>
+                <span><strong>Recommended</strong> - Highly beneficial</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #3498db;"></div>
+                <span><strong>Optional</strong> - Situational</span>
+            </div>
+        </div>
+
+        <div class="path-selector">
+            <h3>Select Your Organization Size</h3>
+            <div class="paths">
+                <div class="path-card active" data-path="all">
+                    <h4>View All</h4>
+                    <p>Complete roadmap</p>
+                </div>
+                <div class="path-card" data-path="micro">
+                    <h4>Micro</h4>
+                    <p>1-10 employees</p>
+                    <p>30-day timeline</p>
+                </div>
+                <div class="path-card" data-path="small">
+                    <h4>Small</h4>
+                    <p>11-50 employees</p>
+                    <p>90-day timeline</p>
+                </div>
+                <div class="path-card" data-path="medium">
+                    <h4>Medium</h4>
+                    <p>51-250 employees</p>
+                    <p>6-month timeline</p>
+                </div>
+                <div class="path-card" data-path="large">
+                    <h4>Large</h4>
+                    <p>250+ employees</p>
+                    <p>12-month timeline</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="roadmap">
+            <!-- STAGE 1: DISCOVER -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">1</div>
+                    <div class="stage-title">
+                        <h2>DISCOVER - Business Case & Obligation Analysis</h2>
+                        <p>Understand your DoD contract obligations and CMMC requirements</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify Your Contracts</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Review all existing and planned DoD contracts to identify CMMC requirements.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>What:</strong> Gather all DoD prime and subcontracts</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 1-2 hours</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👤</span>
+                                <span><strong>Who:</strong> Contracts manager, Legal</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://sam.gov/" class="link-button" target="_blank">SAM.gov Portal</a>
+                            <a href="https://www.usaspending.gov/" class="link-button"
+                                target="_blank">USASpending.gov</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify DFARS Clauses</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Review contracts for DFARS clauses 252.204-7012, 252.204-7019, 252.204-7020, 252.204-7021.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>What:</strong> Search contracts for DFARS cybersecurity clauses</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 2-4 hours</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Output:</strong> List of contracts with CMMC requirements</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting."
+                                class="link-button" target="_blank">DFARS 252.204-7012</a>
+                            <a href="https://www.acquisition.gov/dfars/252.204-7019-notice-of-nist-sp-800-171-doi-assessment-requirements."
+                                class="link-button" target="_blank">DFARS 252.204-7019</a>
+                            <a href="https://www.acquisition.gov/dfars/252.204-7020-nist-sp-800-171-dod-assessment-requirements."
+                                class="link-button" target="_blank">DFARS 252.204-7020</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Determine Required CMMC Level</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Based on contract data type (FCI, CUI) and criticality, determine if you need Level 1, 2, or
+                            3.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Level 1:</strong> FCI only (15 controls)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Level 2:</strong> CUI protection (110 controls)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Level 3:</strong> Critical CUI (110 + 24 controls)</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://dodcio.defense.gov/CMMC/Model/" class="link-button" target="_blank">CMMC
+                                2.0 Model</a>
+                            <a href="https://www.acq.osd.mil/cmmc/documentation.html" class="link-button"
+                                target="_blank">CMMC Documentation</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Calculate Business Impact</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Determine total DoD contract value at risk and ROI of CMMC compliance investment.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Calculate:</strong> Annual DoD contract revenue</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Estimate:</strong> Compliance costs vs. contract value</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📈</span>
+                                <span><strong>Decide:</strong> Go/No-Go decision on CMMC pursuit</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Executive Briefing</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Present business case, timeline, and budget to executive leadership for approval.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Include:</strong> Cost-benefit analysis, timeline, resource needs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- STAGE 2: SCOPE -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">2</div>
+                    <div class="stage-title">
+                        <h2>SCOPE - Boundary Definition & Asset Inventory</h2>
+                        <p>Define your CMMC assessment boundary and identify all assets</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify CUI & FCI Data</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Locate all Controlled Unclassified Information and Federal Contract Information in your
+                            organization.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>What is CUI:</strong> Technical data, contract info, export-controlled
+                                    data</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>What is FCI:</strong> Contract details, pricing, proprietary info</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 1-2 weeks</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.archives.gov/cui" class="link-button" target="_blank">CUI Registry
+                                (NARA)</a>
+                            <a href="https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX" class="link-button"
+                                target="_blank">32 CFR Part 2002 (CUI)</a>
+                            <a href="https://www.nist.gov/system/files/documents/2020/01/28/NIST_Identifying-CUI.pdf"
+                                class="link-button" target="_blank">NIST Guide to CUI</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Create Asset Inventory</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Document all systems, applications, and infrastructure that process, store, or transmit
+                            CUI/FCI.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💻</span>
+                                <span><strong>Include:</strong> Servers, workstations, mobile devices, cloud
+                                    services</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📱</span>
+                                <span><strong>Apps:</strong> Email, file storage, collaboration tools, specialized
+                                    software</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🌐</span>
+                                <span><strong>Network:</strong> Firewalls, routers, switches, VPN</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final"
+                                class="link-button" target="_blank">NIST 800-171 Rev 2</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Define CMMC Assessment Boundary</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Establish the logical and physical boundary of your CMMC assessment scope.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>In-Scope:</strong> All assets that touch CUI/FCI</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🚫</span>
+                                <span><strong>Out-of-Scope:</strong> Assets isolated from CUI/FCI</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📐</span>
+                                <span><strong>Document:</strong> Network diagrams, data flows, access points</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.acq.osd.mil/cmmc/docs/CMMC_ModelOverview_V2.0_FINAL2_20211202_508.pdf"
+                                class="link-button" target="_blank">CMMC Assessment Guide</a>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Evaluate Enclave Options</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Decide whether to implement a CUI enclave (isolated environment) or enterprise-wide
+                            compliance.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🏰</span>
+                                <span><strong>Enclave:</strong> Separate, hardened environment for CUI only</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🌐</span>
+                                <span><strong>Enterprise:</strong> Apply controls across entire organization</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Trade-off:</strong> Enclave = higher initial cost, lower ongoing;
+                                    Enterprise = lower initial, higher ongoing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity optional">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Data Flows</div>
+                            <div class="activity-badge">Optional</div>
+                        </div>
+                        <div class="activity-description">
+                            Create detailed data flow diagrams showing how CUI/FCI moves through your organization.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Benefit:</strong> Identifies hidden CUI exposure points</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+            <!-- STAGE 3: DOCUMENT - SSP -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">6</div>
+                    <div class="stage-title">
+                        <h2>DOCUMENT - System Security Plan (SSP)</h2>
+                        <p>Create comprehensive documentation of your security program</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Obtain SSP Template</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Download official NIST 800-171 SSP template or use DoD-approved format.
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/documents/SSP_Template.docx"
+                                class="link-button" target="_blank">NIST SSP Template</a>
+                            <a href="https://www.nist.gov/document/nist-sp-800-171-system-security-plan-ssp-template-word"
+                                class="link-button" target="_blank">NIST 800-171 SSP</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document System Characterization</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Complete detailed description of your information system, boundaries, and architecture.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Include:</strong> System name, purpose, boundaries, authorization</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🗺️</span>
+                                <span><strong>Diagrams:</strong> Network topology, data flows, interconnections</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Inventory:</strong> Hardware, software, services, personnel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Control Implementations</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Write detailed control-by-control descriptions of HOW each control is implemented.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📝</span>
+                                <span><strong>Per Control:</strong> Implementation status, methods, responsible parties,
+                                    evidence</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 40-80 hours for 110 controls (Level 2)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Quality:</strong> Specific, technical details - not generic
+                                    statements</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Attach Supporting Evidence</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Compile and reference all evidence documents, policies, procedures, and screenshots.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📎</span>
+                                <span><strong>Evidence:</strong> Policies, procedures, configs, screenshots, logs,
+                                    certificates</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🗂️</span>
+                                <span><strong>Organize:</strong> Folder structure by control family (AC, AU,
+                                    etc.)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Include POA&Ms in SSP</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Attach all POA&M documents as appendix to SSP with current status.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Format:</strong> Standardized POA&M template with all required
+                                    fields</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Policies & Procedures</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Create or update all required security policies and operating procedures.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📚</span>
+                                <span><strong>Minimum:</strong> 17 domain-specific policies, incident response,
+                                    acceptable use</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✍️</span>
+                                <span><strong>Approval:</strong> Management signature and date on all policies</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Internal SSP Review</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Have internal stakeholders review SSP for accuracy, completeness, and consistency.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">👥</span>
+                                <span><strong>Reviewers:</strong> IT, Security, Compliance, Legal, Management</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Check:</strong> Technical accuracy, no contradictions, evidence
+                                    quality</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Pre-Assessment SSP Review by RP</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Have a Registered Practitioner review your SSP before C3PAO assessment.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Cost:</strong> $5,000-$15,000</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✅</span>
+                                <span><strong>Benefit:</strong> Identify issues before expensive C3PAO engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+             <!-- STAGE 5: POA&M CREATION -->
+             <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">5</div>
+                    <div class="stage-title">
+                        <h2>POA&M - Plan of Action & Milestones</h2>
+                        <p>Document remediation plans for gaps that cannot be immediately closed</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify Controls for POA&M</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Determine which control gaps require POA&M versus immediate remediation.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">✅</span>
+                                <span><strong>POA&M Acceptable:</strong> Long-term projects, major investments, vendor
+                                    dependencies</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">❌</span>
+                                <span><strong>Not Acceptable:</strong> Quick fixes, basic hygiene, low-cost
+                                    solutions</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Target:</strong> 80-85% implemented, 10-15% in POA&M, 5-10% N/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Create POA&M Documents</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Develop comprehensive POA&M for each control gap with detailed remediation plans.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Required Elements:</strong> Weakness, root cause, risk, plan, milestones,
+                                    resources, timeline</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📅</span>
+                                <span><strong>Timeline:</strong> Realistic completion dates (typically 3-12
+                                    months)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Budget:</strong> Detailed cost estimates for remediation</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://dodcio.defense.gov/Portals/0/Documents/CMMC/ModelOverview_V2.0_FINAL2_20211202.pdf"
+                                class="link-button" target="_blank">CMMC POA&M Guidance</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Define Milestones & Owners</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Establish specific, measurable milestones with clear ownership and accountability.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">👤</span>
+                                <span><strong>Assign:</strong> POA&M owner, approver, and implementation team</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📍</span>
+                                <span><strong>Milestones:</strong> 3-5 checkpoints per POA&M with target dates</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Risk Mitigations</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            For each POA&M, document interim risk mitigation measures until gap is closed.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🛡️</span>
+                                <span><strong>Mitigations:</strong> Compensating controls, monitoring,
+                                    restrictions</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Risk Level:</strong> Assess and document residual risk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Get Management Approval</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Obtain formal approval from senior management for POA&M plans and resource commitments.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">✍️</span>
+                                <span><strong>Approval:</strong> Signed acknowledgment of POA&M plans and budgets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Track POA&M Progress</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Establish tracking mechanism for POA&M status, milestones, and completion.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Updates:</strong> Monthly status reviews and progress documentation</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔄</span>
+                                <span><strong>Changes:</strong> Document any timeline or scope adjustments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+            <!-- STAGE 3: ASSESS -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">3</div>
+                    <div class="stage-title">
+                        <h2>ASSESS - Gap Analysis & Control Evaluation</h2>
+                        <p>Evaluate current security posture against CMMC requirements</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Download CMMC Assessment Guide</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Obtain official CMMC 2.0 assessment materials and NIST 800-171 documentation.
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://dodcio.defense.gov/CMMC/Model/" class="link-button" target="_blank">CMMC
+                                2.0 Model</a>
+                            <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final"
+                                class="link-button" target="_blank">NIST 800-171 Rev 2</a>
+                            <a href="https://csrc.nist.gov/publications/detail/sp/800-171a/rev-2/final"
+                                class="link-button" target="_blank">NIST 800-171A Rev 2</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Conduct Self-Assessment</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Perform control-by-control assessment of current implementation status.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Level 1:</strong> Assess 15 basic safeguarding requirements</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Level 2:</strong> Assess 110 NIST 800-171 controls</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 2-4 weeks for Level 2</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.dibcac.org/" class="link-button" target="_blank">DIB CAC Resources</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Calculate SPRS Score</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Calculate your Supplier Performance Risk System (SPRS) score based on assessment.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Formula:</strong> (Implemented Controls × 5 + Planned × 1) / Total
+                                    Controls × 110</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Target:</strong> Minimum 88-110 for Level 2</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.sprs.csd.disa.mil/" class="link-button" target="_blank">SPRS Portal</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify Gaps & Prioritize</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Document all control deficiencies and prioritize remediation based on risk and
+                            implementation complexity.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🔴</span>
+                                <span><strong>Critical:</strong> Controls protecting CUI directly</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🟡</span>
+                                <span><strong>High:</strong> Foundation controls, quick wins</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🟢</span>
+                                <span><strong>Medium/Low:</strong> Can defer to POA&M</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Engage Gap Assessment Consultant</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Consider hiring a Registered Practitioner (RP) for professional gap assessment (especially
+                            for first-time organizations).
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Cost:</strong> $15,000-$35,000 for professional assessment</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✅</span>
+                                <span><strong>Benefit:</strong> Expert validation, faster remediation planning</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://cyberab.org/Catalog" class="link-button" target="_blank">Find Registered
+                                Practitioners</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Create Remediation Plan</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Develop detailed plan to address gaps, including timeline, budget, and resource allocation.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📅</span>
+                                <span><strong>Include:</strong> Milestones, responsible parties, dependencies</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Budget:</strong> Estimate costs for tools, training, services</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- STAGE 4: IMPLEMENT -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">4</div>
+                    <div class="stage-title">
+                        <h2>IMPLEMENT - Control Deployment & Remediation</h2>
+                        <p>Deploy security controls and close identified gaps</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Implement Access Controls</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Deploy authentication, authorization, and access management controls across all in-scope
+                            systems.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🔐</span>
+                                <span><strong>Key Controls:</strong> Multi-factor authentication (MFA), role-based
+                                    access, least privilege</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 2-4 weeks</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Priority:</strong> Tier 1 Critical - implement first</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final"
+                                class="link-button" target="_blank">NIST 800-171 AC Controls</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Deploy Security Tools</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Install and configure required security technologies (SIEM, EDR, encryption, etc.).
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🛡️</span>
+                                <span><strong>Tools:</strong> Antivirus, firewall, encryption, logging, backup</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Cost:</strong> $10,000-$50,000 depending on org size</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Establish Incident Response Plan</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Create and test incident response procedures, including breach notification to DoD.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Include:</strong> Roles, escalation, containment, recovery
+                                    procedures</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final"
+                                class="link-button" target="_blank">NIST 800-61 IR Guide</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Conduct Security Awareness Training</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Train all personnel on CUI handling, security practices, and their responsibilities.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">👥</span>
+                                <span><strong>Frequency:</strong> Initial training + annual refreshers</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Track:</strong> Completion records, test scores, certificates</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Implement Audit Logging</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Enable comprehensive logging and monitoring across all systems handling CUI/FCI.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📝</span>
+                                <span><strong>Log:</strong> Access attempts, changes, security events</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Review:</strong> Regular log review and correlation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Conduct Vulnerability Scanning</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Perform regular vulnerability scans and penetration testing to identify weaknesses.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Frequency:</strong> Monthly scans, annual penetration test</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document All Implementations</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Keep detailed records of all control implementations, configurations, and evidence.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📸</span>
+                                <span><strong>Capture:</strong> Screenshots, configs, policies, procedures</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🗂️</span>
+                                <span><strong>Organize:</strong> By control family for easy C3PAO review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- STAGE 7: CERTIFY - C3PAO ASSESSMENT -->
+            <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">7</div>
+                    <div class="stage-title">
+                        <h2>CERTIFY - C3PAO Assessment & Certification</h2>
+                        <p>Engage CMMC Third-Party Assessment Organization for formal certification</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Research & Select C3PAO</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Identify and evaluate authorized C3PAOs, obtain quotes, and select assessor.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Criteria:</strong> Experience, reputation, availability, cost,
+                                    location</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Cost:</strong> $50,000-$118,000+ depending on org size/complexity</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📅</span>
+                                <span><strong>Lead Time:</strong> 2-6 months from engagement to assessment</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://cyberab.org/Catalog" class="link-button" target="_blank">C3PAO
+                                Marketplace</a>
+                            <a href="https://www.acq.osd.mil/cmmc/c3pao.html" class="link-button" target="_blank">About
+                                C3PAOs</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Submit SSP Package to C3PAO</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Provide complete SSP, evidence, POA&Ms, and supporting documentation to selected C3PAO.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📦</span>
+                                <span><strong>Package:</strong> SSP, policies, procedures, evidence, network diagrams,
+                                    POA&Ms</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔒</span>
+                                <span><strong>Security:</strong> Secure transmission (encrypted, NDA signed)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">C3PAO Document Review</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            C3PAO conducts initial review of SSP and evidence, identifies gaps or questions.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Process:</strong> C3PAO reviews all documentation before on-site
+                                    visit</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💬</span>
+                                <span><strong>Clarifications:</strong> Respond promptly to C3PAO questions</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Duration:</strong> 1-3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Schedule Assessment Activities</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Coordinate assessment dates, interviews, and site visits with C3PAO team.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📅</span>
+                                <span><strong>Activities:</strong> Interviews, system demonstrations, site inspection,
+                                    evidence validation</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👥</span>
+                                <span><strong>Participants:</strong> System owners, security personnel,
+                                    management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">On-Site/Virtual Assessment</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            C3PAO conducts formal assessment including interviews, testing, and evidence validation.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Duration:</strong> 3-10 days depending on org size</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Activities:</strong> Control testing, interviews, system inspection,
+                                    evidence review</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📝
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
