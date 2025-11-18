@@ -285,3 +285,101 @@ body {
         transform: none;
     }
 }
+
+/* .Priority Matrix.. */
+
+.md-content {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.md-content h1, 
+.md-content h2, 
+.md-content h3, 
+.md-content h4 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+.md-content p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.md-content ul, 
+.md-content ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.md-content li {
+    margin-bottom: 8px;
+}
+
+.md-content pre {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.md-content code {
+    background: #f0f0f0;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.md-content.priority-matrix {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.md-content.priority-matrix h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.md-content.priority-matrix hr {
+    border: none;
+    border-top: 2px solid #667eea;
+    width: 50px;
+    margin: 0 auto 30px auto;
+}
+
+.md-content.priority-matrix .tier {
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.md-content.priority-matrix .tier-1 {
+    background: #fdecea;
+    border-left: 6px solid #e74c3c;
+}
+
+.md-content.priority-matrix .tier-2 {
+    background: #fff4e5;
+    border-left: 6px solid #f39c12;
+}
+
+.md-content.priority-matrix .tier-3 {
+    background: #e8f0fe;
+    border-left: 6px solid #3498db;
+}
+
+.md-content.priority-matrix .tier-4 {
+    background: #eaeaea;
+}

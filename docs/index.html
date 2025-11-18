@@ -13,6 +13,9 @@
         <div class="header">
             <h1>🛡️ CMMC Compliance Journey Roadmap</h1>
             <p>Your step-by-step guide from contract discovery to certification</p>
+            <div style="background-color:#fff3cd; color:#856404; border:1px solid #ffeeba; padding:15px; border-radius:5px; margin-bottom:20px;">
+                ⚠️ <strong>Disclaimer:</strong> This site is an unofficial, open-source project for learning and supplementing CMMC compliance knowledge. It is not affiliated with or endorsed by CMMC. Use for educational purposes only.
+              </div>
         </div>
 
         <div class="legend">
@@ -59,7 +62,10 @@
                 </div>
             </div>
         </div>
-
+    
+        <div id="path-content" class="md-content">
+        </div>
+        
         <div class="roadmap">
             <!-- STAGE 1: DISCOVER -->
             <div class="stage">
@@ -126,7 +132,7 @@
                         <div class="activity-links">
                             <a href="https://www.acquisition.gov/dfars/252.204-7012-safeguarding-covered-defense-information-and-cyber-incident-reporting."
                                 class="link-button" target="_blank">DFARS 252.204-7012</a>
-                            <a href="https://www.acquisition.gov/dfars/252.204-7019-notice-of-nist-sp-800-171-doi-assessment-requirements."
+                            <a href="https://www.acquisition.gov/dfars/252.204-7019-notice-nistsp-800-171-dod-assessment-requirements."
                                 class="link-button" target="_blank">DFARS 252.204-7019</a>
                             <a href="https://www.acquisition.gov/dfars/252.204-7020-nist-sp-800-171-dod-assessment-requirements."
                                 class="link-button" target="_blank">DFARS 252.204-7020</a>
@@ -159,7 +165,7 @@
                         <div class="activity-links">
                             <a href="https://dodcio.defense.gov/CMMC/Model/" class="link-button" target="_blank">CMMC
                                 2.0 Model</a>
-                            <a href="https://www.acq.osd.mil/cmmc/documentation.html" class="link-button"
+                            <a href="https://dodcio.defense.gov/cmmc/Resources-Documentation/" class="link-button"
                                 target="_blank">CMMC Documentation</a>
                         </div>
                     </div>
@@ -248,7 +254,7 @@
                                 (NARA)</a>
                             <a href="https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX" class="link-button"
                                 target="_blank">32 CFR Part 2002 (CUI)</a>
-                            <a href="https://www.nist.gov/system/files/documents/2020/01/28/NIST_Identifying-CUI.pdf"
+                            <a href="https://csrc.nist.gov/projects/protecting-controlled-unclassified-information"
                                 class="link-button" target="_blank">NIST Guide to CUI</a>
                         </div>
                     </div>
@@ -307,7 +313,7 @@
                             </div>
                         </div>
                         <div class="activity-links">
-                            <a href="https://www.acq.osd.mil/cmmc/docs/CMMC_ModelOverview_V2.0_FINAL2_20211202_508.pdf"
+                            <a href="https://dodcio.defense.gov/Portals/0/Documents/CMMC/AssessmentGuideL2.pdf"
                                 class="link-button" target="_blank">CMMC Assessment Guide</a>
                         </div>
                     </div>
@@ -357,334 +363,7 @@
             </div>
 
             <div class="connector"></div>
-            <!-- STAGE 3: DOCUMENT - SSP -->
-            <div class="stage">
-                <div class="stage-header">
-                    <div class="stage-number">6</div>
-                    <div class="stage-title">
-                        <h2>DOCUMENT - System Security Plan (SSP)</h2>
-                        <p>Create comprehensive documentation of your security program</p>
-                    </div>
-                </div>
 
-                <div class="activities">
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Obtain SSP Template</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Download official NIST 800-171 SSP template or use DoD-approved format.
-                        </div>
-                        <div class="activity-links">
-                            <a href="https://csrc.nist.gov/CSRC/media/Projects/risk-management/documents/SSP_Template.docx"
-                                class="link-button" target="_blank">NIST SSP Template</a>
-                            <a href="https://www.nist.gov/document/nist-sp-800-171-system-security-plan-ssp-template-word"
-                                class="link-button" target="_blank">NIST 800-171 SSP</a>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Document System Characterization</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Complete detailed description of your information system, boundaries, and architecture.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📋</span>
-                                <span><strong>Include:</strong> System name, purpose, boundaries, authorization</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🗺️</span>
-                                <span><strong>Diagrams:</strong> Network topology, data flows, interconnections</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">📊</span>
-                                <span><strong>Inventory:</strong> Hardware, software, services, personnel</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Document Control Implementations</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Write detailed control-by-control descriptions of HOW each control is implemented.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📝</span>
-                                <span><strong>Per Control:</strong> Implementation status, methods, responsible parties,
-                                    evidence</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">⏱️</span>
-                                <span><strong>Time:</strong> 40-80 hours for 110 controls (Level 2)</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🎯</span>
-                                <span><strong>Quality:</strong> Specific, technical details - not generic
-                                    statements</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Attach Supporting Evidence</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Compile and reference all evidence documents, policies, procedures, and screenshots.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📎</span>
-                                <span><strong>Evidence:</strong> Policies, procedures, configs, screenshots, logs,
-                                    certificates</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🗂️</span>
-                                <span><strong>Organize:</strong> Folder structure by control family (AC, AU,
-                                    etc.)</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Include POA&Ms in SSP</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Attach all POA&M documents as appendix to SSP with current status.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📋</span>
-                                <span><strong>Format:</strong> Standardized POA&M template with all required
-                                    fields</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Document Policies & Procedures</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Create or update all required security policies and operating procedures.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📚</span>
-                                <span><strong>Minimum:</strong> 17 domain-specific policies, incident response,
-                                    acceptable use</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">✍️</span>
-                                <span><strong>Approval:</strong> Management signature and date on all policies</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Internal SSP Review</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Have internal stakeholders review SSP for accuracy, completeness, and consistency.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">👥</span>
-                                <span><strong>Reviewers:</strong> IT, Security, Compliance, Legal, Management</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🔍</span>
-                                <span><strong>Check:</strong> Technical accuracy, no contradictions, evidence
-                                    quality</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity recommended">
-                        <div class="activity-header">
-                            <div class="activity-title">Pre-Assessment SSP Review by RP</div>
-                            <div class="activity-badge">Recommended</div>
-                        </div>
-                        <div class="activity-description">
-                            Have a Registered Practitioner review your SSP before C3PAO assessment.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">💰</span>
-                                <span><strong>Cost:</strong> $5,000-$15,000</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">✅</span>
-                                <span><strong>Benefit:</strong> Identify issues before expensive C3PAO engagement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="connector"></div>
-             <!-- STAGE 5: POA&M CREATION -->
-             <div class="stage">
-                <div class="stage-header">
-                    <div class="stage-number">5</div>
-                    <div class="stage-title">
-                        <h2>POA&M - Plan of Action & Milestones</h2>
-                        <p>Document remediation plans for gaps that cannot be immediately closed</p>
-                    </div>
-                </div>
-
-                <div class="activities">
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Identify Controls for POA&M</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Determine which control gaps require POA&M versus immediate remediation.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">✅</span>
-                                <span><strong>POA&M Acceptable:</strong> Long-term projects, major investments, vendor
-                                    dependencies</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">❌</span>
-                                <span><strong>Not Acceptable:</strong> Quick fixes, basic hygiene, low-cost
-                                    solutions</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🎯</span>
-                                <span><strong>Target:</strong> 80-85% implemented, 10-15% in POA&M, 5-10% N/A</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Create POA&M Documents</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Develop comprehensive POA&M for each control gap with detailed remediation plans.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📋</span>
-                                <span><strong>Required Elements:</strong> Weakness, root cause, risk, plan, milestones,
-                                    resources, timeline</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">📅</span>
-                                <span><strong>Timeline:</strong> Realistic completion dates (typically 3-12
-                                    months)</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">💰</span>
-                                <span><strong>Budget:</strong> Detailed cost estimates for remediation</span>
-                            </div>
-                        </div>
-                        <div class="activity-links">
-                            <a href="https://dodcio.defense.gov/Portals/0/Documents/CMMC/ModelOverview_V2.0_FINAL2_20211202.pdf"
-                                class="link-button" target="_blank">CMMC POA&M Guidance</a>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Define Milestones & Owners</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Establish specific, measurable milestones with clear ownership and accountability.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">👤</span>
-                                <span><strong>Assign:</strong> POA&M owner, approver, and implementation team</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">📍</span>
-                                <span><strong>Milestones:</strong> 3-5 checkpoints per POA&M with target dates</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Document Risk Mitigations</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            For each POA&M, document interim risk mitigation measures until gap is closed.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">🛡️</span>
-                                <span><strong>Mitigations:</strong> Compensating controls, monitoring,
-                                    restrictions</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">📊</span>
-                                <span><strong>Risk Level:</strong> Assess and document residual risk</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity recommended">
-                        <div class="activity-header">
-                            <div class="activity-title">Get Management Approval</div>
-                            <div class="activity-badge">Recommended</div>
-                        </div>
-                        <div class="activity-description">
-                            Obtain formal approval from senior management for POA&M plans and resource commitments.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">✍️</span>
-                                <span><strong>Approval:</strong> Signed acknowledgment of POA&M plans and budgets</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activity required">
-                        <div class="activity-header">
-                            <div class="activity-title">Track POA&M Progress</div>
-                            <div class="activity-badge">Required</div>
-                        </div>
-                        <div class="activity-description">
-                            Establish tracking mechanism for POA&M status, milestones, and completion.
-                        </div>
-                        <div class="activity-details">
-                            <div class="detail-row">
-                                <span class="detail-icon">📊</span>
-                                <span><strong>Updates:</strong> Monthly status reviews and progress documentation</span>
-                            </div>
-                            <div class="detail-row">
-                                <span class="detail-icon">🔄</span>
-                                <span><strong>Changes:</strong> Document any timeline or scope adjustments</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="connector"></div>
             <!-- STAGE 3: ASSESS -->
             <div class="stage">
                 <div class="stage-header">
@@ -709,7 +388,7 @@
                                 2.0 Model</a>
                             <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final"
                                 class="link-button" target="_blank">NIST 800-171 Rev 2</a>
-                            <a href="https://csrc.nist.gov/publications/detail/sp/800-171a/rev-2/final"
+                            <a href="https://csrc.nist.gov/pubs/sp/800/171/a/final"
                                 class="link-button" target="_blank">NIST 800-171A Rev 2</a>
                         </div>
                     </div>
@@ -737,7 +416,7 @@
                             </div>
                         </div>
                         <div class="activity-links">
-                            <a href="https://www.dibcac.org/" class="link-button" target="_blank">DIB CAC Resources</a>
+                            <a href="https://www.dcma.mil/DIBCAC/" class="link-button" target="_blank">DIB CAC Resources</a>
                         </div>
                     </div>
 
@@ -1000,6 +679,334 @@
             </div>
 
             <div class="connector"></div>
+             <!-- STAGE 3: DOCUMENT - SSP -->
+             <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">6</div>
+                    <div class="stage-title">
+                        <h2>DOCUMENT - System Security Plan (SSP)</h2>
+                        <p>Create comprehensive documentation of your security program</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Obtain SSP Template</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Download official NIST 800-171 SSP template or use DoD-approved format.
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final"
+                                class="link-button" target="_blank">NIST SSP Template</a>
+                            <a href="https://csrc.nist.gov/csrc/media/Publications/sp/800-171/rev-2/final/documents/CUI-SSP-Template-final.docx"
+                                class="link-button" target="_blank">NIST 800-171 SSP</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document System Characterization</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Complete detailed description of your information system, boundaries, and architecture.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Include:</strong> System name, purpose, boundaries, authorization</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🗺️</span>
+                                <span><strong>Diagrams:</strong> Network topology, data flows, interconnections</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Inventory:</strong> Hardware, software, services, personnel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Control Implementations</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Write detailed control-by-control descriptions of HOW each control is implemented.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📝</span>
+                                <span><strong>Per Control:</strong> Implementation status, methods, responsible parties,
+                                    evidence</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Time:</strong> 40-80 hours for 110 controls (Level 2)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Quality:</strong> Specific, technical details - not generic
+                                    statements</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Attach Supporting Evidence</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Compile and reference all evidence documents, policies, procedures, and screenshots.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📎</span>
+                                <span><strong>Evidence:</strong> Policies, procedures, configs, screenshots, logs,
+                                    certificates</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🗂️</span>
+                                <span><strong>Organize:</strong> Folder structure by control family (AC, AU,
+                                    etc.)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Include POA&Ms in SSP</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Attach all POA&M documents as appendix to SSP with current status.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Format:</strong> Standardized POA&M template with all required
+                                    fields</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Policies & Procedures</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Create or update all required security policies and operating procedures.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📚</span>
+                                <span><strong>Minimum:</strong> 17 domain-specific policies, incident response,
+                                    acceptable use</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✍️</span>
+                                <span><strong>Approval:</strong> Management signature and date on all policies</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Internal SSP Review</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Have internal stakeholders review SSP for accuracy, completeness, and consistency.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">👥</span>
+                                <span><strong>Reviewers:</strong> IT, Security, Compliance, Legal, Management</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔍</span>
+                                <span><strong>Check:</strong> Technical accuracy, no contradictions, evidence
+                                    quality</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Pre-Assessment SSP Review by RP</div>
+                            <div class="activsty-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Have a Registered Practitioner review your SSP before C3PAO assessment.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Cost:</strong> $5,000-$15,000</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✅</span>
+                                <span><strong>Benefit:</strong> Identify issues before expensive C3PAO engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
+             <!-- STAGE 5: POA&M CREATION -->
+             <div class="stage">
+                <div class="stage-header">
+                    <div class="stage-number">5</div>
+                    <div class="stage-title">
+                        <h2>POA&M - Plan of Action & Milestones</h2>
+                        <p>Document remediation plans for gaps that cannot be immediately closed</p>
+                    </div>
+                </div>
+
+                <div class="activities">
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Identify Controls for POA&M</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Determine which control gaps require POA&M versus immediate remediation.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">✅</span>
+                                <span><strong>POA&M Acceptable:</strong> Long-term projects, major investments, vendor
+                                    dependencies</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">❌</span>
+                                <span><strong>Not Acceptable:</strong> Quick fixes, basic hygiene, low-cost
+                                    solutions</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎯</span>
+                                <span><strong>Target:</strong> 80-85% implemented, 10-15% in POA&M, 5-10% N/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Create POA&M Documents</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Develop comprehensive POA&M for each control gap with detailed remediation plans.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📋</span>
+                                <span><strong>Required Elements:</strong> Weakness, root cause, risk, plan, milestones,
+                                    resources, timeline</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📅</span>
+                                <span><strong>Timeline:</strong> Realistic completion dates (typically 3-12
+                                    months)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span><strong>Budget:</strong> Detailed cost estimates for remediation</span>
+                            </div>
+                        </div>
+                        <div class="activity-links">
+                            <a href="https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-G/part-170/subpart-D/section-170.21"
+                                class="link-button" target="_blank">CMMC POA&M Guidance</a>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Define Milestones & Owners</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Establish specific, measurable milestones with clear ownership and accountability.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">👤</span>
+                                <span><strong>Assign:</strong> POA&M owner, approver, and implementation team</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📍</span>
+                                <span><strong>Milestones:</strong> 3-5 checkpoints per POA&M with target dates</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Document Risk Mitigations</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            For each POA&M, document interim risk mitigation measures until gap is closed.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🛡️</span>
+                                <span><strong>Mitigations:</strong> Compensating controls, monitoring,
+                                    restrictions</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Risk Level:</strong> Assess and document residual risk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity recommended">
+                        <div class="activity-header">
+                            <div class="activity-title">Get Management Approval</div>
+                            <div class="activity-badge">Recommended</div>
+                        </div>
+                        <div class="activity-description">
+                            Obtain formal approval from senior management for POA&M plans and resource commitments.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">✍️</span>
+                                <span><strong>Approval:</strong> Signed acknowledgment of POA&M plans and budgets</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity required">
+                        <div class="activity-header">
+                            <div class="activity-title">Track POA&M Progress</div>
+                            <div class="activity-badge">Required</div>
+                        </div>
+                        <div class="activity-description">
+                            Establish tracking mechanism for POA&M status, milestones, and completion.
+                        </div>
+                        <div class="activity-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📊</span>
+                                <span><strong>Updates:</strong> Monthly status reviews and progress documentation</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🔄</span>
+                                <span><strong>Changes:</strong> Document any timeline or scope adjustments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="connector"></div>
 
             <!-- STAGE 7: CERTIFY - C3PAO ASSESSMENT -->
             <div class="stage">
@@ -1038,8 +1045,8 @@
                         <div class="activity-links">
                             <a href="https://cyberab.org/Catalog" class="link-button" target="_blank">C3PAO
                                 Marketplace</a>
-                            <a href="https://www.acq.osd.mil/cmmc/c3pao.html" class="link-button" target="_blank">About
-                                C3PAOs</a>
+                            <a href="https://cyberab.org/faq" class="link-button" target="_blank">About
+                                C3PAOs FAQ</a>
                         </div>
                     </div>
 
@@ -1139,4 +1146,8 @@
             </div>
         </div>
     </div>
+     <!-- Include marked.js first -->
+     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+     <!-- Your external JS file -->
+    <script src="./js/script.js"></script>
 </body>
