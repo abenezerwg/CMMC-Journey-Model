@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/cmmc-journey-model?style=social)](https://github.com/yourusername/cmmc-journey-model)
+[![GitHub stars](https://img.shields.io/github/stars/abenezerwg/cmmc-journey-model?style=social)](https://github.com/abenezerwg/CMMC-Journey-Model)
 
 
 # 🛡️ CMMC Journey Model (CJM)
