@@ -1,4 +1,7 @@
-
+// TODO: Update scoring logic to track 320+ Assessment Objectives (AOs) individually to prevent false positives.
+// Currently this tool tracks 110 controls only. For accurate CMMC Level 2 assessment, each control should map to 
+// its corresponding Assessment Objectives from NIST SP 800-171A Rev 2. A control may not be fully implemented
+// if its AOs are not met.
 
 controls = [
     // AC - Access Control (22 controls)
@@ -214,7 +217,7 @@ function renderControls() {
                 <span class="category-icon">${info.icon}</span>
                 <div class="category-info">
                     <div class="category-family">${family} - ${info.name}</div>
-                    <div class="category-stats">${met}/${familyControls.length} met</div>
+                    <div class="category-stats">${met}/${familyControls.length} implemented</div>
                 </div>
             </div>
             <div class="category-toggle ${isExpanded ? 'expanded' : ''}">⬇️</div>
@@ -247,14 +250,14 @@ function renderControls() {
                 <div class="control-title">${control.title}</div>
                 <div class="control-description">${control.description}</div>
                 <div class="control-actions">
-                    <button class="status-btn met ${data.status === 'met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'met')">✅ Met</button>
-                    <button class="status-btn not-met ${data.status === 'not-met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'not-met')">❌ Not Met</button>
+                    <button class="status-btn met ${data.status === 'met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'met')">✅ Implemented</button>
+                    <button class="status-btn not-met ${data.status === 'not-met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'not-met')">❌ Not Implemented</button>
                     <button class="status-btn na ${data.status === 'na' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'na')">⊘ N/A</button>
                     <button class="status-btn other ${data.status === 'other' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'other')">❓ Other</button>
                 </div>
                 <div class="notes-section">
-                    <label class="notes-label">Notes:</label>
-                    <textarea class="notes-input" placeholder="Add findings or evidence..." onchange="setNotes('${control.id}', this.value)">${data.notes || ''}</textarea>
+                    <label class="notes-label">Notes & Evidence:</label>
+                    <textarea class="notes-input" placeholder="Add implementation notes, evidence references, or Assessment Objective status..." onchange="setNotes('${control.id}', this.value)">${data.notes || ''}</textarea>
                 </div>
             `;
 
@@ -376,8 +379,9 @@ function exportJSON() {
         timestamp: new Date().toISOString(),
         summary: {
             totalControls: 110,
-            metControls: Object.values(assessmentData).filter(d => d.status === 'met').length,
-            notMetControls: Object.values(assessmentData).filter(d => d.status === 'not-met').length
+            implementedControls: Object.values(assessmentData).filter(d => d.status === 'met').length,
+            notImplementedControls: Object.values(assessmentData).filter(d => d.status === 'not-met').length,
+            note: 'This assessment tracks 110 controls. For accurate CMMC Level 2 evaluation, verify all 320+ Assessment Objectives per NIST SP 800-171A during formal C3PAO assessment.'
         },
         assessments: assessmentData
     };

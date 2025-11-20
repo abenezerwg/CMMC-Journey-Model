@@ -4,42 +4,48 @@
 
 ## Overview
 - Focused scope (all systems handling CUI)
-- Self-assessment or basic C3PAO
-- 90-day timeline
-- ~$15K budget
-- Tier 1 + Tier 2 fully, start Tier 3 if feasible
+- Self-assessment or basic C3PAO engagement
+- **6–12 month timeline** (typical; accelerated timelines possible with pre-existing security controls)
+- ~$15K–$35K budget
+- **Level 1 + Level 2 fully, start Level 3 if feasible**
 
 ## Recommended Stages
 
 ### 1. Discover
 - Business case and obligation mapping
 - Contract review for CUI handling
+- Executive stakeholder alignment
 
 ### 2. Scope
 - Identify all assets and CUI flows
+- Create Data Flow Diagrams (DFDs) to map CUI sources/destinations
 - Consider minimal enclave if multiple systems
+- Define assessment boundary
 
 ### 3. Assess
-- Full gap analysis across Tier 1 & Tier 2
+- Full gap analysis across Level 1 & Level 2
+- Verify coverage of **320 Assessment Objectives (AOs)** per NIST SP 800-171A
 - Draft POA&M for gaps
-- Prioritize Tier 1 controls
+- Prioritize Level 1 controls for immediate remediation
 
 ### 4. Implement
-- Apply Tier 1 and Tier 2 controls
-- Start selected Tier 3 controls if budget allows
-- Evidence collection (policies, configurations, training)
+- Apply **Level 1 and Level 2 controls**
+- Start selected Level 3 controls if budget allows
+- Evidence collection (policies, configurations, training records, logs)
+- Establish audit logging and monitoring
 
 ### 5. Document
 - Complete SSP for core systems
-- POA&M finalized
-- Evidence organized for review
+- POA&M finalized with realistic timelines
+- Evidence organized by control family for C3PAO review
 
 ### 6. Certify
-- Optional C3PAO pre-assessment
-- Formal assessment if required
+- Optional Certified CMMC Professional (CCP) pre-assessment review
+- C3PAO formal assessment if required by contract
 - Continuous compliance and improvements
 
 ## Tips
-- Focus on foundational controls first
-- Track progress using simple project tools
-- Budget for minor external consultation if needed
+- Focus on foundational (Level 1) controls first
+- Track progress using project management tools (e.g., Jira, Monday.com)
+- Budget for external consultation if needed (CCP guidance is cost-effective at this scale)
+- Document POA&M justification clearly—simple fixes can be included if properly prioritized
