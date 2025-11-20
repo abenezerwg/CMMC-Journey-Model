@@ -730,3 +730,54 @@ body {
         justify-content: center;
     }
 }
+/**Header top**/
+/* Update header-top to handle the spacing */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* New container to group the buttons on the right */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between GitHub icon and Home button */
+}
+
+/* GitHub Icon Styling */
+.github-btn {
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.github-btn:hover {
+    color: #6e5494; /* GitHub Purple on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.github-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Update home-btn to remove margin-top if it exists */
+.home-btn {
+    /* ... keep your existing styles ... */
+    margin-top: 0; /* Ensure it aligns perfectly with the icon */
+}
+
+/* Mobile responsiveness adjustment */
+@media (max-width: 599px) {
+    .header-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
