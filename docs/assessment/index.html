@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMMC Gap Assessment - NIST 800-171 Rev 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ CMMC Gap Assessment Tool</h1>
+            <p>NIST 800-171 Rev 2 Compliance Assessment (110 Controls)</p>
+            <div class="disclaimer">
+                ⚠️ <strong>Disclaimer:</strong> This is an unofficial, open-source assessment tool for learning purposes. 
+                It is not a formal C3PAO assessment. Use to supplement your CMMC compliance knowledge.
+            </div>
+            <a href="../index.html" class="home-btn">🏠 Back to Roadmap</a>
+        </div>
+        
+
+        <div class="stats-box">
+            <div class="stat-card">
+                <h3>Total Controls</h3>
+                <div class="value" id="totalControls">110</div>
+            </div>
+            <div class="stat-card">
+                <h3>Met Controls</h3>
+                <div class="value" id="metControls">0</div>
+                <div class="percentage" id="metPercentage">0%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Not Met</h3>
+                <div class="value" id="notMetControls">0</div>
+                <div class="percentage" id="notMetPercentage">0%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Score</h3>
+                <div class="value" id="score">0</div>
+                <div class="percentage" id="scorePercentage">/110</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar" style="width: 0%">0%</div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" onclick="downloadPDF()">📥 Download PDF</button>
+            <button class="btn btn-secondary" onclick="exportJSON()">💾 Export JSON</button>
+            <button class="btn btn-secondary" onclick="resetAssessment()">🔄 Reset All</button>
+        </div>
+
+        <div class="filter-section">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" data-filter="all" onclick="filterControls('all')">All</button>
+            <button class="filter-btn" data-filter="met" onclick="filterControls('met')">✅ Met</button>
+            <button class="filter-btn" data-filter="not-met" onclick="filterControls('not-met')">❌ Not Met</button>
+            <button class="filter-btn" data-filter="na" onclick="filterControls('na')">⊘ N/A</button>
+            <button class="filter-btn" data-filter="unassessed" onclick="filterControls('unassessed')">⬚ Unassessed</button>
+        </div>
+
+        <div class="expand-controls">
+            <span class="expand-controls-label">Categories:</span>
+            <button class="expand-btn" onclick="expandAllCategories()">⬇️ Expand All</button>
+            <button class="expand-btn" onclick="collapseAllCategories()">⬆️ Collapse All</button>
+        </div>
+
+        <div id="controlsList"></div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
