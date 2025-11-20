@@ -1,39 +1,216 @@
-// TODO: Update scoring logic to track 320+ Assessment Objectives (AOs) individually to prevent false positives.
-// Currently this tool tracks 110 controls only. For accurate CMMC Level 2 assessment, each control should map to 
-// its corresponding Assessment Objectives from NIST SP 800-171A Rev 2. A control may not be fully implemented
-// if its AOs are not met.
+// NOTE: The AC (Access Control) family has been fully populated with Assessment Objectives 
+// from NIST 800-171A Rev 2. Other families require manual addition of the 'objectives' array.
 
-controls = [
-    // AC - Access Control (22 controls)
-    { id: 'AC.L2-3.1.1', family: 'AC', title: 'Authorized Access Control [CUI Data]', description: 'Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).' },
-    { id: 'AC.L2-3.1.2', family: 'AC', title: 'Transaction & Function Control', description: 'Limit system access to the types of transactions and functions that authorized users are permitted to execute.' },
-    { id: 'AC.L2-3.1.3', family: 'AC', title: 'Control CUI Flow', description: 'Control the flow of CUI in accordance with approved authorizations.' },
-    { id: 'AC.L2-3.1.4', family: 'AC', title: 'Separation of Duties', description: 'Separate the duties of individuals to reduce the risk of malevolent activity without collusion.' },
-    { id: 'AC.L2-3.1.5', family: 'AC', title: 'Least Privilege', description: 'Employ the principle of least privilege, including for specific security functions and privileged accounts.' },
-    { id: 'AC.L2-3.1.6', family: 'AC', title: 'Non-Privileged Account Use', description: 'Use non-privileged accounts or roles when accessing nonsecurity functions.' },
-    { id: 'AC.L2-3.1.7', family: 'AC', title: 'Privileged Functions', description: 'Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.' },
-    { id: 'AC.L2-3.1.8', family: 'AC', title: 'Unsuccessful Logon Attempts', description: 'Limit unsuccessful logon attempts.' },
-    { id: 'AC.L2-3.1.9', family: 'AC', title: 'Privacy & Security Notices', description: 'Provide privacy and security notices consistent with applicable CUI rules.' },
-    { id: 'AC.L2-3.1.10', family: 'AC', title: 'Session Lock', description: 'Use session lock with pattern-hiding displays to prevent access and viewing of data after a period of inactivity.' },
-    { id: 'AC.L2-3.1.11', family: 'AC', title: 'Session Termination', description: 'Terminate (automatically) a user session after a defined condition.' },
-    { id: 'AC.L2-3.1.12', family: 'AC', title: 'Control Remote Access', description: 'Monitor and control remote access sessions.' },
-    { id: 'AC.L2-3.1.13', family: 'AC', title: 'Remote Access Confidentiality', description: 'Employ cryptographic mechanisms to protect the confidentiality of remote access sessions.' },
-    { id: 'AC.L2-3.1.14', family: 'AC', title: 'Remote Access Routing', description: 'Route remote access via managed access control points.' },
-    { id: 'AC.L2-3.1.15', family: 'AC', title: 'Privileged Remote Access', description: 'Authorize remote execution of privileged commands and remote access to security-relevant information.' },
-    { id: 'AC.L2-3.1.16', family: 'AC', title: 'Wireless Access Authorization', description: 'Authorize wireless access prior to allowing such connections.' },
-    { id: 'AC.L2-3.1.17', family: 'AC', title: 'Wireless Access Protection', description: 'Protect wireless access using authentication and encryption.' },
-    { id: 'AC.L2-3.1.18', family: 'AC', title: 'Mobile Device Connection', description: 'Control connection of mobile devices.' },
-    { id: 'AC.L2-3.1.19', family: 'AC', title: 'Encrypt CUI on Mobile', description: 'Encrypt CUI on mobile devices and mobile computing platforms.' },
-    { id: 'AC.L2-3.1.20', family: 'AC', title: 'External Connections [CUI Data]', description: 'Verify and control/limit connections to and use of external systems.' },
-    { id: 'AC.L2-3.1.21', family: 'AC', title: 'Portable Storage Use', description: 'Limit use of portable storage devices on external systems.' },
-    { id: 'AC.L2-3.1.22', family: 'AC', title: 'Control Public Information [CUI Data]', description: 'Control CUI posted or processed on publicly accessible systems.' },
+const controls = [
+    // --- AC - Access Control (22 controls) ---
+    { 
+        id: 'AC.L2-3.1.1', family: 'AC', title: 'Authorized Access Control', 
+        description: 'Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).',
+        objectives: [
+            'Authorized users are identified.',
+            'Processes acting on behalf of authorized users are identified.',
+            'Devices (and other systems) authorized to connect to the system are identified.',
+            'System access is limited to authorized users.',
+            'System access is limited to processes acting on behalf of authorized users.',
+            'System access is limited to authorized devices (including other systems).'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.2', family: 'AC', title: 'Transaction & Function Control', 
+        description: 'Limit system access to the types of transactions and functions that authorized users are permitted to execute.',
+        objectives: [
+            'The types of transactions and functions that authorized users are permitted to execute are defined.',
+            'System access is limited to the defined types of transactions and functions.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.3', family: 'AC', title: 'Control CUI Flow', 
+        description: 'Control the flow of CUI in accordance with approved authorizations.',
+        objectives: [
+            'Information flow control policies are defined.',
+            'Methods and mechanisms to enforce defined information flow control policies are identified.',
+            'Designated sources and destinations (e.g., networks, individuals, and devices) for CUI within the system and between the system and other systems are identified.',
+            'Exceptions to flow control policies are identified.',
+            'The flow of CUI is controlled in accordance with approved authorizations.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.4', family: 'AC', title: 'Separation of Duties', 
+        description: 'Separate the duties of individuals to reduce the risk of malevolent activity without collusion.',
+        objectives: [
+            'Duties of individuals requiring separation are defined.',
+            'Responsibilities for defined duties are assigned to separate individuals.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.5', family: 'AC', title: 'Least Privilege', 
+        description: 'Employ the principle of least privilege, including for specific security functions and privileged accounts.',
+        objectives: [
+            'Privileged accounts are identified.',
+            'Access to privileged accounts is authorized in accordance with the principle of least privilege.',
+            'Security functions are identified.',
+            'Access to security functions is authorized in accordance with the principle of least privilege.',
+            'Non-privileged accounts are identified.',
+            'Access to non-privileged accounts is authorized in accordance with the principle of least privilege.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.6', family: 'AC', title: 'Non-Privileged Account Use', 
+        description: 'Use non-privileged accounts or roles when accessing nonsecurity functions.',
+        objectives: [
+            'Non-security functions are identified.',
+            'Non-privileged accounts or roles are used when accessing non-security functions.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.7', family: 'AC', title: 'Privileged Functions', 
+        description: 'Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.',
+        objectives: [
+            'Privileged functions are identified.',
+            'Non-privileged users are prevented from executing privileged functions.',
+            'The execution of privileged functions is captured in audit logs.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.8', family: 'AC', title: 'Unsuccessful Logon Attempts', 
+        description: 'Limit unsuccessful logon attempts.',
+        objectives: [
+            'The number of consecutive unsuccessful logon attempts allowed is defined.',
+            'The time period during which the defined number of unsuccessful logon attempts applies is defined (if applicable).',
+            'Unsuccessful logon attempts are limited to the defined number.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.9', family: 'AC', title: 'Privacy & Security Notices', 
+        description: 'Provide privacy and security notices consistent with applicable CUI rules.',
+        objectives: [
+            'Privacy and security notices are defined.',
+            'Privacy and security notices are consistent with applicable CUI rules.',
+            'Privacy and security notices are provided.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.10', family: 'AC', title: 'Session Lock', 
+        description: 'Use session lock with pattern-hiding displays to prevent access and viewing of data after a period of inactivity.',
+        objectives: [
+            'A period of inactivity after which the system initiates a session lock is defined.',
+            'A session lock is initiated after the defined period of inactivity.',
+            'The session lock prevents access to the system.',
+            'The session lock prevents viewing of data.',
+            'The session lock conceals, via a pattern-hiding display, information previously visible on the display.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.11', family: 'AC', title: 'Session Termination', 
+        description: 'Terminate (automatically) a user session after a defined condition.',
+        objectives: [
+            'Conditions or trigger events requiring automatic session termination are defined.',
+            'User sessions are automatically terminated when defined conditions or trigger events occur.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.12', family: 'AC', title: 'Control Remote Access', 
+        description: 'Monitor and control remote access sessions.',
+        objectives: [
+            'Types of allowed remote access are defined.',
+            'Remote access sessions are monitored.',
+            'Remote access sessions are controlled.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.13', family: 'AC', title: 'Remote Access Confidentiality', 
+        description: 'Employ cryptographic mechanisms to protect the confidentiality of remote access sessions.',
+        objectives: [
+            'Cryptographic mechanisms to protect the confidentiality of remote access sessions are identified.',
+            'Identified cryptographic mechanisms are employed to protect the confidentiality of remote access sessions.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.14', family: 'AC', title: 'Remote Access Routing', 
+        description: 'Route remote access via managed access control points.',
+        objectives: [
+            'Managed access control points are identified.',
+            'Remote access is routed through managed access control points.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.15', family: 'AC', title: 'Privileged Remote Access', 
+        description: 'Authorize remote execution of privileged commands and remote access to security-relevant information.',
+        objectives: [
+            'Privileged commands are identified.',
+            'Security-relevant information is identified.',
+            'Remote execution of privileged commands is authorized.',
+            'Remote access to security-relevant information is authorized.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.16', family: 'AC', title: 'Wireless Access Authorization', 
+        description: 'Authorize wireless access prior to allowing such connections.',
+        objectives: [
+            'Wireless access is authorized prior to allowing such connections.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.17', family: 'AC', title: 'Wireless Access Protection', 
+        description: 'Protect wireless access using authentication and encryption.',
+        objectives: [
+            'Authentication is used to protect wireless access.',
+            'Encryption is used to protect wireless access.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.18', family: 'AC', title: 'Mobile Device Connection', 
+        description: 'Control connection of mobile devices.',
+        objectives: [
+            'Mobile devices are identified.',
+            'Connections of mobile devices are controlled.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.19', family: 'AC', title: 'Encrypt CUI on Mobile', 
+        description: 'Encrypt CUI on mobile devices and mobile computing platforms.',
+        objectives: [
+            'CUI is encrypted on mobile devices.',
+            'CUI is encrypted on mobile computing platforms.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.20', family: 'AC', title: 'External Connections [CUI Data]', 
+        description: 'Verify and control/limit connections to and use of external systems.',
+        objectives: [
+            'Connections to external systems are identified.',
+            'The use of external systems is identified.',
+            'Connections to external systems are verified.',
+            'The use of external systems is verified.',
+            'Connections to external systems are controlled or limited.',
+            'The use of external systems is controlled or limited.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.21', family: 'AC', title: 'Portable Storage Use', 
+        description: 'Limit use of portable storage devices on external systems.',
+        objectives: [
+            'Portable storage devices are identified.',
+            'External systems are identified.',
+            'The use of portable storage devices on external systems is limited.'
+        ]
+    },
+    { 
+        id: 'AC.L2-3.1.22', family: 'AC', title: 'Control Public Information [CUI Data]', 
+        description: 'Control CUI posted or processed on publicly accessible systems.',
+        objectives: [
+            'Publicly accessible systems are identified.',
+            'CUI posted or processed on publicly accessible systems is controlled.'
+        ]
+    },
 
-    // AT - Awareness and Training (3 controls)
+    // --- AT - Awareness and Training (3 controls) ---
+    // TODO: Add objectives for remaining families
     { id: 'AT.L2-3.2.1', family: 'AT', title: 'Role-Based Risk Awareness', description: 'Ensure that managers, systems administrators, and users of organizational systems are made aware of the security risks associated with their activities and of the applicable policies, standards, and procedures related to the security of those systems.' },
     { id: 'AT.L2-3.2.2', family: 'AT', title: 'Role-Based Training', description: 'Ensure that personnel are trained to carry out their assigned information security-related duties and responsibilities.' },
     { id: 'AT.L2-3.2.3', family: 'AT', title: 'Insider Threat Awareness', description: 'Provide security awareness training on recognizing and reporting potential indicators of insider threat.' },
 
-    // AU - Audit & Accountability (9 controls)
+    // --- AU - Audit & Accountability (9 controls) ---
     { id: 'AU.L2-3.3.1', family: 'AU', title: 'System Auditing', description: 'Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.' },
     { id: 'AU.L2-3.3.2', family: 'AU', title: 'User Accountability', description: 'Ensure that the actions of individual system users can be uniquely traced to those users so they can be held accountable for their actions.' },
     { id: 'AU.L2-3.3.3', family: 'AU', title: 'Event Review', description: 'Review and update logged events.' },
@@ -44,7 +221,7 @@ controls = [
     { id: 'AU.L2-3.3.8', family: 'AU', title: 'Audit Protection', description: 'Protect audit information and audit logging tools from unauthorized access, modification, and deletion.' },
     { id: 'AU.L2-3.3.9', family: 'AU', title: 'Audit Management', description: 'Limit management of audit logging functionality to a subset of privileged users.' },
 
-    // CM - Configuration Management (9 controls)
+    // --- CM - Configuration Management (9 controls) ---
     { id: 'CM.L2-3.4.1', family: 'CM', title: 'System Baselining', description: 'Establish and maintain baseline configurations and inventories of organizational systems (including hardware, software, firmware, and documentation) throughout the respective system development life cycles.' },
     { id: 'CM.L2-3.4.2', family: 'CM', title: 'Security Configuration Enforcement', description: 'Establish and enforce security configuration settings for information technology products employed in organizational systems.' },
     { id: 'CM.L2-3.4.3', family: 'CM', title: 'System Change Management', description: 'Track, review, approve or disapprove, and log changes to organizational systems.' },
@@ -55,7 +232,7 @@ controls = [
     { id: 'CM.L2-3.4.8', family: 'CM', title: 'Application Execution Policy', description: 'Apply deny-by-exception (blacklisting) policy to prevent the use of unauthorized software or deny-all, permit-by-exception (whitelisting) policy to allow the execution of authorized software.' },
     { id: 'CM.L2-3.4.9', family: 'CM', title: 'User-Installed Software', description: 'Control and monitor user-installed software.' },
 
-    // IA - Identification & Authentication (11 controls)
+    // --- IA - Identification & Authentication (11 controls) ---
     { id: 'IA.L2-3.5.1', family: 'IA', title: 'Identification [CUI Data]', description: 'Identify system users, processes acting on behalf of users, and devices.' },
     { id: 'IA.L2-3.5.2', family: 'IA', title: 'Authentication [CUI Data]', description: 'Authenticate (or verify) the identities of users, processes, or devices, as a prerequisite to allowing access to organizational systems.' },
     { id: 'IA.L2-3.5.3', family: 'IA', title: 'Multifactor Authentication', description: 'Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts.' },
@@ -68,12 +245,12 @@ controls = [
     { id: 'IA.L2-3.5.10', family: 'IA', title: 'Cryptographically-Protected Passwords', description: 'Store and transmit only cryptographically-protected passwords.' },
     { id: 'IA.L2-3.5.11', family: 'IA', title: 'Obscure Feedback', description: 'Obscure feedback of authentication information.' },
 
-    // IR - Incident Response (3 controls)
+    // --- IR - Incident Response (3 controls) ---
     { id: 'IR.L2-3.6.1', family: 'IR', title: 'Incident Handling', description: 'Establish an operational incident-handling capability for organizational systems that includes preparation, detection, analysis, containment, recovery, and user response activities.' },
     { id: 'IR.L2-3.6.2', family: 'IR', title: 'Incident Reporting', description: 'Track, document, and report incidents to designated officials and/or authorities both internal and external to the organization.' },
     { id: 'IR.L2-3.6.3', family: 'IR', title: 'Incident Response Testing', description: 'Test the organizational incident response capability.' },
 
-    // MA - Maintenance (6 controls)
+    // --- MA - Maintenance (6 controls) ---
     { id: 'MA.L2-3.7.1', family: 'MA', title: 'Perform Maintenance', description: 'Perform maintenance on organizational systems.' },
     { id: 'MA.L2-3.7.2', family: 'MA', title: 'System Maintenance Control', description: 'Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.' },
     { id: 'MA.L2-3.7.3', family: 'MA', title: 'Equipment Sanitization', description: 'Ensure equipment removed for off-site maintenance is sanitized of any CUI.' },
@@ -81,7 +258,7 @@ controls = [
     { id: 'MA.L2-3.7.5', family: 'MA', title: 'Nonlocal Maintenance', description: 'Require multifactor authentication to establish nonlocal maintenance sessions via external network connections and terminate such connections when nonlocal maintenance is complete.' },
     { id: 'MA.L2-3.7.6', family: 'MA', title: 'Maintenance Personnel', description: 'Supervise the maintenance activities of maintenance personnel without required access authorization.' },
 
-    // MP - Media Protection (9 controls)
+    // --- MP - Media Protection (9 controls) ---
     { id: 'MP.L2-3.8.1', family: 'MP', title: 'Media Protection', description: 'Protect (i.e., physically control and securely store) system media containing CUI, both paper and digital.' },
     { id: 'MP.L2-3.8.2', family: 'MP', title: 'Media Access', description: 'Limit access to CUI on system media to authorized users.' },
     { id: 'MP.L2-3.8.3', family: 'MP', title: 'Media Disposal [CUI Data]', description: 'Sanitize or destroy system media containing CUI before disposal or release for reuse.' },
@@ -92,11 +269,11 @@ controls = [
     { id: 'MP.L2-3.8.8', family: 'MP', title: 'Shared Media', description: 'Prohibit the use of portable storage devices when such devices have no identifiable owner.' },
     { id: 'MP.L2-3.8.9', family: 'MP', title: 'Protect Backups', description: 'Protect the confidentiality of backup CUI at storage locations.' },
 
-    // PS - Personnel Security (2 controls)
+    // --- PS - Personnel Security (2 controls) ---
     { id: 'PS.L2-3.9.1', family: 'PS', title: 'Screen Individuals', description: 'Screen individuals prior to authorizing access to organizational systems containing CUI.' },
     { id: 'PS.L2-3.9.2', family: 'PS', title: 'Personnel Actions', description: 'Ensure that organizational systems containing CUI are protected during and after personnel actions such as terminations and transfers.' },
 
-    // PE - Physical Protection (6 controls)
+    // --- PE - Physical Protection (6 controls) ---
     { id: 'PE.L2-3.10.1', family: 'PE', title: 'Limit Physical Access [CUI Data]', description: 'Limit physical access to organizational systems, equipment, and the respective operating environments to authorized individuals.' },
     { id: 'PE.L2-3.10.2', family: 'PE', title: 'Monitor Facility', description: 'Protect and monitor the physical facility and support infrastructure for organizational systems.' },
     { id: 'PE.L2-3.10.3', family: 'PE', title: 'Escort Visitors [CUI Data]', description: 'Escort visitors and monitor visitor activity.' },
@@ -104,18 +281,18 @@ controls = [
     { id: 'PE.L2-3.10.5', family: 'PE', title: 'Manage Physical Access [CUI Data]', description: 'Control and manage physical access devices.' },
     { id: 'PE.L2-3.10.6', family: 'PE', title: 'Alternative Work Sites', description: 'Enforce safeguarding measures for CUI at alternate work sites.' },
 
-    // RA - Risk Assessment (3 controls)
+    // --- RA - Risk Assessment (3 controls) ---
     { id: 'RA.L2-3.11.1', family: 'RA', title: 'Risk Assessments', description: 'Periodically assess the risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals, resulting from the operation of organizational systems and the associated processing, storage, or transmission of CUI.' },
     { id: 'RA.L2-3.11.2', family: 'RA', title: 'Vulnerability Scan', description: 'Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified.' },
     { id: 'RA.L2-3.11.3', family: 'RA', title: 'Vulnerability Remediation', description: 'Remediate vulnerabilities in accordance with risk assessments.' },
 
-    // CA - Security Assessment (4 controls)
+    // --- CA - Security Assessment (4 controls) ---
     { id: 'CA.L2-3.12.1', family: 'CA', title: 'Security Control Assessment', description: 'Periodically assess the security controls in organizational systems to determine if the controls are effective in their application.' },
     { id: 'CA.L2-3.12.2', family: 'CA', title: 'Operational Plan of Action', description: 'Develop and implement plans of action designed to correct deficiencies and reduce or eliminate vulnerabilities in organizational systems.' },
     { id: 'CA.L2-3.12.3', family: 'CA', title: 'Security Control Monitoring', description: 'Monitor security controls on an ongoing basis to ensure the continued effectiveness of the controls.' },
     { id: 'CA.L2-3.12.4', family: 'CA', title: 'System Security Plan', description: 'Develop, document, and periodically update system security plans that describe system boundaries, system environments of operation, how security requirements are implemented, and the relationships with or connections to other systems.' },
 
-    // SC - System and Communications Protection (16 controls)
+    // --- SC - System and Communications Protection (16 controls) ---
     { id: 'SC.L2-3.13.1', family: 'SC', title: 'Boundary Protection [CUI Data]', description: 'Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.' },
     { id: 'SC.L2-3.13.2', family: 'SC', title: 'Security Engineering', description: 'Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems.' },
     { id: 'SC.L2-3.13.3', family: 'SC', title: 'Role Separation', description: 'Separate user functionality from system management functionality.' },
@@ -133,7 +310,7 @@ controls = [
     { id: 'SC.L2-3.13.15', family: 'SC', title: 'Communications Authenticity', description: 'Protect the authenticity of communications sessions.' },
     { id: 'SC.L2-3.13.16', family: 'SC', title: 'Data at Rest', description: 'Protect the confidentiality of CUI at rest.' },
 
-    // SI - System and Information Integrity (7 controls)
+    // --- SI - System and Information Integrity (7 controls) ---
     { id: 'SI.L2-3.14.1', family: 'SI', title: 'Flaw Remediation [CUI Data]', description: 'Identify, report, and correct system flaws in a timely manner.' },
     { id: 'SI.L2-3.14.2', family: 'SI', title: 'Malicious Code Protection [CUI Data]', description: 'Provide protection from malicious code at designated locations within organizational systems.' },
     { id: 'SI.L2-3.14.3', family: 'SI', title: 'Security Alerts & Advisories', description: 'Monitor system security alerts and advisories and take action in response.' },
@@ -164,6 +341,9 @@ let assessmentData = {};
 let currentFilter = 'all';
 let expandedCategories = {};
 
+// Initialize functionality
+document.addEventListener('DOMContentLoaded', init);
+
 function init() {
     loadAssessmentData();
     renderControls();
@@ -186,17 +366,22 @@ function renderControls() {
     const list = document.getElementById('controlsList');
     list.innerHTML = '';
 
+    // Group controls by family
     const families = {};
     controls.forEach(control => {
         if (!families[control.family]) {
             families[control.family] = [];
-            if (!(control.family in expandedCategories)) {
+            // Auto-expand AC family initially for better UX, others collapsed
+            if (control.family === 'AC' && !(control.family in expandedCategories)) {
                 expandedCategories[control.family] = true;
+            } else if (!(control.family in expandedCategories)) {
+                expandedCategories[control.family] = false; 
             }
         }
         families[control.family].push(control);
     });
 
+    // Render each family
     Object.keys(families).sort().forEach(family => {
         const familyControls = families[family];
         const info = familyInfo[family];
@@ -228,7 +413,8 @@ function renderControls() {
         body.id = `category-${family}`;
 
         familyControls.forEach(control => {
-            const data = assessmentData[control.id] || { status: '', notes: '' };
+            // Get data or default
+            const data = assessmentData[control.id] || { status: '', notes: '', objectives: {} };
             const statusClass = data.status ? data.status : '';
 
             const item = document.createElement('div');
@@ -237,11 +423,37 @@ function renderControls() {
             item.setAttribute('data-status', data.status || '');
             item.setAttribute('data-family', family);
 
+            // Status Badge
             let statusBadge = '';
             if (data.status) {
                 statusBadge = `<span class="control-status-badge ${data.status}">${capitalize(data.status)}</span>`;
             }
 
+            // Generate Assessment Objectives HTML
+            let objectivesHtml = '';
+            if (control.objectives && control.objectives.length > 0) {
+                objectivesHtml = `<div class="objectives-section">
+                    <div class="objectives-header">
+                        <span>📋</span> Assessment Objectives (NIST 800-171A)
+                    </div>`;
+                
+                control.objectives.forEach((obj, index) => {
+                    const isChecked = (data.objectives && data.objectives[index]) ? 'checked' : '';
+                    objectivesHtml += `
+                        <div class="objective-item">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" 
+                                       ${isChecked} 
+                                       onchange="toggleObjective('${control.id}', ${index}, this.checked)">
+                                <span class="checkmark"></span>
+                                <span class="objective-text"><strong>${String.fromCharCode(97 + index)}.</strong> ${obj}</span>
+                            </label>
+                        </div>`;
+                });
+                objectivesHtml += `</div>`;
+            }
+
+            // Construct full Item HTML
             item.innerHTML = `
                 <div class="control-header">
                     <span class="control-id">${control.id}</span>
@@ -249,6 +461,9 @@ function renderControls() {
                 </div>
                 <div class="control-title">${control.title}</div>
                 <div class="control-description">${control.description}</div>
+                
+                ${objectivesHtml}
+
                 <div class="control-actions">
                     <button class="status-btn met ${data.status === 'met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'met')">✅ Implemented</button>
                     <button class="status-btn not-met ${data.status === 'not-met' ? 'selected' : ''}" onclick="setStatus('${control.id}', 'not-met')">❌ Not Implemented</button>
@@ -257,7 +472,7 @@ function renderControls() {
                 </div>
                 <div class="notes-section">
                     <label class="notes-label">Notes & Evidence:</label>
-                    <textarea class="notes-input" placeholder="Add implementation notes, evidence references, or Assessment Objective status..." onchange="setNotes('${control.id}', this.value)">${data.notes || ''}</textarea>
+                    <textarea class="notes-input" placeholder="Add implementation notes, evidence references..." onchange="setNotes('${control.id}', this.value)">${data.notes || ''}</textarea>
                 </div>
             `;
 
@@ -285,50 +500,71 @@ function shouldHideControl(control, data) {
 
 function toggleCategory(family) {
     expandedCategories[family] = !expandedCategories[family];
-    const body = document.getElementById(`category-${family}`);
-    const header = document.querySelector(`[data-family="${family}"].category-header`);
-    const toggle = header ? header.querySelector('.category-toggle') : null;
-
-    if (body) body.classList.toggle('collapsed');
-    if (toggle) toggle.classList.toggle('expanded');
+    renderControls(); // Re-render to update state (simplest approach)
 }
 
 function expandAllCategories() {
-    Object.keys(expandedCategories).forEach(family => {
-        expandedCategories[family] = true;
-        const body = document.getElementById(`category-${family}`);
-        const header = document.querySelector(`[data-family="${family}"].category-header`);
-        const toggle = header ? header.querySelector('.category-toggle') : null;
-
-        if (body) body.classList.remove('collapsed');
-        if (toggle) toggle.classList.add('expanded');
-    });
+    Object.keys(familyInfo).forEach(f => expandedCategories[f] = true);
+    renderControls();
 }
 
 function collapseAllCategories() {
-    Object.keys(expandedCategories).forEach(family => {
-        expandedCategories[family] = false;
-        const body = document.getElementById(`category-${family}`);
-        const header = document.querySelector(`[data-family="${family}"].category-header`);
-        const toggle = header ? header.querySelector('.category-toggle') : null;
-
-        if (body) body.classList.add('collapsed');
-        if (toggle) toggle.classList.remove('expanded');
-    });
+    Object.keys(familyInfo).forEach(f => expandedCategories[f] = false);
+    renderControls();
 }
 
 function setStatus(controlId, status) {
     if (!assessmentData[controlId]) {
-        assessmentData[controlId] = { status: '', notes: '' };
+        assessmentData[controlId] = { status: '', notes: '', objectives: {} };
     }
     assessmentData[controlId].status = status;
+    
+    // Optional: If manually setting MET, check all boxes (UX choice)
+    // For now, we leave checkboxes independent so users can see gaps.
+    
+    saveAssessmentData();
+    renderControls();
+}
+
+function toggleObjective(controlId, index, isChecked) {
+    if (!assessmentData[controlId]) {
+        assessmentData[controlId] = { status: 'not-met', notes: '', objectives: {} };
+    }
+    if (!assessmentData[controlId].objectives) {
+        assessmentData[controlId].objectives = {};
+    }
+
+    // Update the specific objective
+    assessmentData[controlId].objectives[index] = isChecked;
+
+    // Auto-calculate Status
+    const control = controls.find(c => c.id === controlId);
+    if (control && control.objectives) {
+        const total = control.objectives.length;
+        let checkedCount = 0;
+        
+        for(let i = 0; i < total; i++) {
+            if(assessmentData[controlId].objectives[i]) checkedCount++;
+        }
+
+        if (checkedCount === total) {
+            assessmentData[controlId].status = 'met';
+        } else {
+            // If it was met but we unchecked one, downgrade it
+            // If it was unassessed, set to not-met to show activity
+            if (assessmentData[controlId].status === 'met' || !assessmentData[controlId].status) {
+                assessmentData[controlId].status = 'not-met';
+            }
+        }
+    }
+
     saveAssessmentData();
     renderControls();
 }
 
 function setNotes(controlId, notes) {
     if (!assessmentData[controlId]) {
-        assessmentData[controlId] = { status: '', notes: '' };
+        assessmentData[controlId] = { status: '', notes: '', objectives: {} };
     }
     assessmentData[controlId].notes = notes;
     saveAssessmentData();
@@ -343,14 +579,16 @@ function filterControls(filter) {
 }
 
 function updateStats() {
+    const total = 110;
     const met = Object.values(assessmentData).filter(d => d.status === 'met').length;
     const notMet = Object.values(assessmentData).filter(d => d.status === 'not-met').length;
-    const total = 110;
+    
+    // Score calculation
     const percentage = Math.round((met / total) * 100);
 
     document.getElementById('metControls').textContent = met;
     document.getElementById('notMetControls').textContent = notMet;
-    document.getElementById('metPercentage').textContent = `${Math.round((met / total) * 100)}%`;
+    document.getElementById('metPercentage').textContent = `${percentage}%`;
     document.getElementById('notMetPercentage').textContent = `${Math.round((notMet / total) * 100)}%`;
     document.getElementById('score').textContent = met;
     document.getElementById('progressBar').style.width = percentage + '%';
@@ -362,16 +600,21 @@ function resetAssessment() {
         assessmentData = {};
         localStorage.removeItem('cmmc-assessment');
         currentFilter = 'all';
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-filter') === 'all');
-        });
         renderControls();
         updateStats();
     }
 }
 
 function downloadPDF() {
-    alert('PDF export feature coming soon. Export as JSON for now.');
+    const element = document.querySelector('.container');
+    const opt = {
+        margin: 0.5,
+        filename: 'cmmc-assessment.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
 }
 
 function exportJSON() {
@@ -380,23 +623,22 @@ function exportJSON() {
         summary: {
             totalControls: 110,
             implementedControls: Object.values(assessmentData).filter(d => d.status === 'met').length,
-            notImplementedControls: Object.values(assessmentData).filter(d => d.status === 'not-met').length,
-            note: 'This assessment tracks 110 controls. For accurate CMMC Level 2 evaluation, verify all 320+ Assessment Objectives per NIST SP 800-171A during formal C3PAO assessment.'
         },
-        assessments: assessmentData
+        details: assessmentData
     };
-
-    const dataStr = JSON.stringify(data, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `CMMC-Assessment-${new Date().toISOString().slice(0, 10)}.json`;
-    link.click();
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data, null, 2));
+    const downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", "cmmc-assessment.json");
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
 }
 
-function capitalize(str) {
-    return str.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+function capitalize(s) {
+    if (typeof s !== 'string') return '';
+    // Handle special cases like 'na' -> 'N/A' or 'not-met' -> 'Not Met'
+    if (s === 'na') return 'N/A';
+    if (s === 'not-met') return 'Not Met';
+    return s.charAt(0).toUpperCase() + s.slice(1);
 }
-
-window.addEventListener('DOMContentLoaded', init);
